@@ -6,9 +6,7 @@
 <title>NO2WAR Frame</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Barlow+Condensed:wght@400;700;900&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     background: #0a0a0a;
     color: #fff;
@@ -20,146 +18,32 @@
     justify-content: center;
     padding: 30px 20px;
   }
-
-  h1 {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    letter-spacing: 0.1em;
-    color: #fff;
-    margin-bottom: 4px;
-    text-align: center;
-  }
-
+  h1 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: 0.1em; margin-bottom: 4px; text-align: center; }
   h1 span { color: #e63946; }
-
-  .subtitle {
-    font-size: 1rem;
-    color: #888;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 36px;
-    text-align: center;
-  }
-
-  .workspace {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    max-width: 900px;
-  }
-
-  .controls {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 220px;
-    flex: 1;
-    max-width: 280px;
-  }
-
-  .upload-area {
-    border: 2px dashed #333;
-    border-radius: 12px;
-    padding: 28px 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: #111;
-  }
+  .subtitle { font-size: 1rem; color: #888; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 36px; text-align: center; }
+  .workspace { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center; width: 100%; max-width: 900px; }
+  .controls { display: flex; flex-direction: column; gap: 16px; min-width: 220px; flex: 1; max-width: 280px; }
+  .upload-area { border: 2px dashed #333; border-radius: 12px; padding: 28px 20px; text-align: center; cursor: pointer; transition: all 0.2s; background: #111; }
   .upload-area:hover { border-color: #e63946; background: #1a0a0c; }
   .upload-area input { display: none; }
   .upload-icon { font-size: 2rem; margin-bottom: 8px; }
   .upload-area p { font-size: 0.85rem; color: #666; line-height: 1.5; }
   .upload-area strong { color: #ccc; display: block; margin-bottom: 4px; font-size: 1rem; }
-
   label.section { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 0.15em; }
-
-  .style-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .style-btn {
-    padding: 10px 6px;
-    border: 2px solid #222;
-    background: #111;
-    color: #888;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: all 0.15s;
-    text-align: center;
-  }
+  .style-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .style-btn { padding: 10px 6px; border: 2px solid #222; background: #111; color: #888; border-radius: 8px; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.15s; text-align: center; }
   .style-btn:hover { border-color: #e63946; color: #fff; }
   .style-btn.active { border-color: #e63946; background: #1a0a0c; color: #e63946; }
-
-  .download-btn {
-    padding: 14px;
-    background: #e63946;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    transition: all 0.2s;
-    width: 100%;
-  }
+  .download-btn { padding: 14px; background: #e63946; color: #fff; border: none; border-radius: 10px; cursor: pointer; font-family: 'Black Han Sans', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; transition: all 0.2s; width: 100%; }
   .download-btn:hover { background: #c1121f; transform: translateY(-1px); }
   .download-btn:disabled { background: #333; color: #555; cursor: not-allowed; transform: none; }
-
-  .preview-wrap {
-    position: relative;
-    flex: 0 0 auto;
-  }
-
-  canvas {
-    border-radius: 50%;
-    display: block;
-    box-shadow: 0 0 60px rgba(230, 57, 70, 0.2);
-  }
-
-  .placeholder {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: #111;
-    border: 3px dashed #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .note {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    color: #444;
-    text-align: center;
-    max-width: 500px;
-    line-height: 1.6;
-  }
+  .placeholder { width: 360px; height: 360px; border-radius: 50%; background: #111; border: 3px dashed #222; display: flex; align-items: center; justify-content: center; color: #333; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; padding: 20px; }
+  .note { margin-top: 30px; font-size: 0.8rem; color: #444; text-align: center; max-width: 500px; line-height: 1.6; }
 </style>
 </head>
 <body>
-
 <h1>NO<span>2</span>WAR</h1>
 <p class="subtitle">Profile Photo Frame Generator</p>
-
 <div class="workspace">
   <div class="controls">
     <label class="section">Your Photo</label>
@@ -169,70 +53,36 @@
       <strong>Upload Photo</strong>
       <p>Click to select your profile picture</p>
     </div>
-
     <label class="section">Frame Style</label>
     <div class="style-grid">
       <button class="style-btn active" onclick="setStyle('bold', this)">Bold Red</button>
       <button class="style-btn" onclick="setStyle('peace', this)">Peace Blue</button>
       <button class="style-btn" onclick="setStyle('dark', this)">Dark Edge</button>
-      <button class="style-btn" onclick="setStyle('minimal', this)">Minimal</button>
+      <button class="style-btn" onclick="setStyle('white', this)">Clean White</button>
     </div>
-
-    <button class="download-btn" id="downloadBtn" onclick="downloadImage()" disabled>
-      ↓ Download
-    </button>
+    <button class="download-btn" id="downloadBtn" onclick="downloadImage()" disabled>↓ Download</button>
   </div>
-
   <div class="preview-wrap">
     <div class="placeholder" id="placeholder">Preview will appear here</div>
-    <canvas id="canvas" width="400" height="400" style="display:none; border-radius:50%;"></canvas>
+    <canvas id="canvas" width="400" height="400" style="display:none;"></canvas>
   </div>
 </div>
-
 <p class="note">Works for LinkedIn, WhatsApp & Instagram. Download and set as your profile photo.</p>
-
 <script>
   let userImage = null;
   let currentStyle = 'bold';
-
   const styles = {
-    bold: {
-      ring: '#e63946',
-      ring2: '#c1121f',
-      textColor: '#ffffff',
-      textBg: '#e63946',
-      ringWidth: 22
-    },
-    peace: {
-      ring: '#457b9d',
-      ring2: '#1d3557',
-      textColor: '#ffffff',
-      textBg: '#457b9d',
-      ringWidth: 22
-    },
-    dark: {
-      ring: '#ffffff',
-      ring2: '#333',
-      textColor: '#000000',
-      textBg: '#ffffff',
-      ringWidth: 20
-    },
-    minimal: {
-      ring: '#e63946',
-      ring2: '#e63946',
-      textColor: '#ffffff',
-      textBg: 'rgba(0,0,0,0.75)',
-      ringWidth: 12
-    }
+    bold:  { bg: '#e63946', bg2: '#c1121f', text: '#ffffff', border: 'rgba(255,255,255,0.3)' },
+    peace: { bg: '#1d3557', bg2: '#457b9d', text: '#ffffff', border: 'rgba(255,255,255,0.3)' },
+    dark:  { bg: '#111111', bg2: '#2a2a2a', text: '#e63946', border: 'rgba(230,57,70,0.4)' },
+    white: { bg: '#ffffff', bg2: '#eeeeee', text: '#e63946', border: 'rgba(230,57,70,0.3)' },
   };
-
   function setStyle(name, btn) {
     currentStyle = name;
     document.querySelectorAll('.style-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     if (userImage) drawFrame();
   }
-
   function loadImage(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -250,67 +100,58 @@
     };
     reader.readAsDataURL(file);
   }
-
   function drawFrame() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     const size = 400;
     const s = styles[currentStyle];
-
+    const ringW = 70;
+    const photoR = size / 2 - ringW - 2;
     ctx.clearRect(0, 0, size, size);
-
-    // Clip to circle
     ctx.save();
     ctx.beginPath();
-    ctx.arc(size/2, size/2, size/2 - s.ringWidth - 2, 0, Math.PI * 2);
+    ctx.arc(size/2, size/2, photoR, 0, Math.PI * 2);
     ctx.clip();
-
-    // Draw user image
-    const r = size/2 - s.ringWidth - 2;
-    const imgSize = r * 2;
-    const cx = size/2 - r;
-    const cy = size/2 - r;
     const iw = userImage.width, ih = userImage.height;
-    const scale = Math.max(imgSize/iw, imgSize/ih);
-    const dw = iw * scale, dh = ih * scale;
-    ctx.drawImage(userImage, cx + (imgSize-dw)/2, cy + (imgSize-dh)/2, dw, dh);
+    const scale = Math.max(photoR*2/iw, photoR*2/ih);
+    const dw = iw*scale, dh = ih*scale;
+    ctx.drawImage(userImage, size/2 - dw/2, size/2 - dh/2, dw, dh);
     ctx.restore();
-
-    // Outer ring gradient
     const grad = ctx.createLinearGradient(0, 0, size, size);
-    grad.addColorStop(0, s.ring);
-    grad.addColorStop(1, s.ring2);
+    grad.addColorStop(0, s.bg);
+    grad.addColorStop(1, s.bg2);
     ctx.beginPath();
-    ctx.arc(size/2, size/2, size/2 - 2, 0, Math.PI * 2);
-    ctx.arc(size/2, size/2, size/2 - s.ringWidth, 0, Math.PI * 2, true);
+    ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+    ctx.arc(size/2, size/2, photoR + 2, 0, Math.PI * 2, true);
     ctx.fillStyle = grad;
     ctx.fill();
-
-    // Text on ring - NO2WAR
-    const text = '  NO2WAR • NO2WAR • NO2WAR • ';
-    ctx.save();
-    ctx.font = `bold ${s.ringWidth * 0.65}px 'Barlow Condensed', sans-serif`;
-    ctx.fillStyle = s.textColor;
+    const fontSize = 36;
+    ctx.font = `900 ${fontSize}px 'Barlow Condensed', Impact, sans-serif`;
+    ctx.fillStyle = s.text;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-
-    const radius = size/2 - s.ringWidth/2 - 1;
-    const angleStep = (Math.PI * 2) / text.length;
-
-    for (let i = 0; i < text.length; i++) {
-      const angle = i * angleStep - Math.PI / 2;
-      ctx.save();
-      ctx.translate(size/2 + radius * Math.cos(angle), size/2 + radius * Math.sin(angle));
-      ctx.rotate(angle + Math.PI/2);
-      ctx.fillText(text[i], 0, 0);
-      ctx.restore();
-    }
-    ctx.restore();
+    const textR = size/2 - ringW/2;
+    ctx.save(); ctx.translate(size/2, size/2); ctx.fillText('NO2WAR', 0, -textR); ctx.restore();
+    ctx.save(); ctx.translate(size/2, size/2); ctx.rotate(Math.PI); ctx.fillText('NO2WAR', 0, -textR); ctx.restore();
+    ctx.save(); ctx.translate(size/2, size/2); ctx.rotate(-Math.PI/2); ctx.fillText('NO2WAR', 0, -textR); ctx.restore();
+    ctx.save(); ctx.translate(size/2, size/2); ctx.rotate(Math.PI/2); ctx.fillText('NO2WAR', 0, -textR); ctx.restore();
+    const dotAngles = [Math.PI/4, 3*Math.PI/4, 5*Math.PI/4, 7*Math.PI/4];
+    dotAngles.forEach(a => {
+      ctx.beginPath();
+      ctx.arc(size/2 + textR * Math.cos(a), size/2 + textR * Math.sin(a), 4, 0, Math.PI*2);
+      ctx.fillStyle = s.text;
+      ctx.globalAlpha = 0.5;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    });
+    ctx.beginPath();
+    ctx.arc(size/2, size/2, photoR + 2, 0, Math.PI * 2);
+    ctx.strokeStyle = s.border;
+    ctx.lineWidth = 3;
+    ctx.stroke();
   }
-
   function downloadImage() {
     const canvas = document.getElementById('canvas');
-    // Create circular PNG
     const out = document.createElement('canvas');
     out.width = 400; out.height = 400;
     const ctx = out.getContext('2d');
@@ -318,7 +159,6 @@
     ctx.arc(200, 200, 200, 0, Math.PI * 2);
     ctx.clip();
     ctx.drawImage(canvas, 0, 0);
-
     const link = document.createElement('a');
     link.download = 'no2war-profile.png';
     link.href = out.toDataURL('image/png');
